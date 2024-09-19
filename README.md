@@ -3,6 +3,9 @@ Implementation of Multi Armed Bandit algorithms from "Reinforcement Learning - A
 
 This library suggests the next actions based on the rewards received for each action.
 
+```bash
+pip install mab-algo
+```
 
 ## Algorithms
 
