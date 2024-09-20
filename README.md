@@ -7,6 +7,43 @@ This library suggests the next actions based on the rewards received for each ac
 pip install mab-algo
 ```
 
+## Quickstart
+
+```python
+actions = ["A", "B", "C"]
+```
+```python
+averager = SimpleAverage()
+averager = WeightedAverage(step_size = 0.2)
+averager = ExponentialMovingAverage(discount = 0.8)
+```
+```python
+algo = EpsilonGreedy(
+    actions = actions,
+    averager = averager,
+    epsilon = 0.5
+)
+
+algo = UCB(
+    actions = actions,
+    averager = averager,
+    exploration = 0.35
+)
+
+algo = GradientBandit(
+    actions = actions,
+    averager = averager, 
+    step_size = 0.9
+)
+```
+```python
+action = algo.step() 
+action = algo.step(reward = 0.5)
+action = algo.step(reward = 5)
+# ... continue as needed
+```
+
+
 ## Algorithms
 
 This library covers the following algorithms:
